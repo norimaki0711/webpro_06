@@ -1,0 +1,15 @@
+<!Doctype html>
+<html>
+<head><meta charset="utf-8"><title><%= data.name %></title></head>
+<body>
+  <h2><%= data.name %> の詳細</h2>
+  <ul>
+    <li>都市: <%= data.city %></li>
+    <li>収容人数: <%= data.capacity %></li>
+    <li>現在順位: <%= data.rank %>位</li>
+  </ul>
+  <a href="/laliga/edit/<%= id %>">編集</a> | 
+  <a href="/laliga/delete/<%= id %>" onclick="return confirm('削除しますか？')">削除</a> | 
+  <a href="/laliga">一覧に戻る</a>
+</body>
+</html>
