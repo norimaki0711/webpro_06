@@ -1,0 +1,20 @@
+<!Doctype html>
+<html>
+<head><meta charset="utf-8"><title>長野県市町村</title></head>
+<body>
+  <h2>長野県 市町村一覧</h2>
+  <table border="1">
+    <tr><th>ID</th><th>自治体コード</th><th>市町村名</th></tr>
+    <% let number = 0 %>
+    <% for( let row of data ) { %>
+      <tr>
+        <td><%= row.id %></td>
+        <td><%= row.code %></td>
+        <td><a href="/nagano/<%= number %>"><%= row.name %></a></td>
+      </tr>
+      <% number += 1 %>
+    <% } %>
+  </table>
+  <a href="/nagano/create">自治体を追加</a>
+</body>
+</html>

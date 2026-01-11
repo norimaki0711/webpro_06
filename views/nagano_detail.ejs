@@ -1,0 +1,15 @@
+<!Doctype html>
+<html>
+<head><meta charset="utf-8"><title><%= data.name %></title></head>
+<body>
+  <h2><%= data.name %> の詳細</h2>
+  <ul>
+    <li>管轄エリア: <%= data.area %></li>
+    <li>人口: <%= data.population %> 人</li>
+    <li>県庁からの距離: <%= data.distance %> km</li>
+  </ul>
+  <a href="/nagano/edit/<%= id %>">編集</a> | 
+  <a href="/nagano/delete/<%= id %>" onclick="return confirm('削除しますか？')">削除</a> | 
+  <a href="/nagano">一覧に戻る</a>
+</body>
+</html>

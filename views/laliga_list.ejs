@@ -1,0 +1,20 @@
+<!Doctype html>
+<html>
+<head><meta charset="utf-8"><title>ラ・リーガ</title></head>
+<body>
+  <h2>ラ・リーガ チーム一覧</h2>
+  <table border="1">
+    <tr><th>ID</th><th>略称</th><th>チーム名</th></tr>
+    <% let number = 0 %>
+    <% for( let row of data ) { %>
+      <tr>
+        <td><%= row.id %></td>
+        <td><%= row.code %></td>
+        <td><a href="/laliga/<%= number %>"><%= row.name %></a></td>
+      </tr>
+      <% number += 1 %>
+    <% } %>
+  </table>
+  <a href="/laliga/create">チームを追加</a>
+</body>
+</html>
